@@ -72,7 +72,7 @@ namespace IS_3_19_ZamyatinIS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text),Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text),Convert.ToInt32(textBox5.Text));
+            CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text),Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
             listBox1.Items.Add(cp.Display());            
         }
         private void button2_Click(object sender, EventArgs e)
