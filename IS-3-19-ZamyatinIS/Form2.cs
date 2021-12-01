@@ -43,16 +43,16 @@ namespace IS_3_19_ZamyatinIS
             ConnBaza ConnBaza = new ConnBaza();
             try
             {
-                ConnBaza.ConnBaz().Open();
+                ConnBaza.ConnBaz().Open();//Попытка открытия соединения
             }
-            catch (Exception zxc)
+            catch (Exception ex)//(Exception ex)-обработка всех исключений, которые могут возникнуть
             {
-                MessageBox.Show($"{zxc}");
+                MessageBox.Show($"{ex}");
             }
             finally
             {
                 MessageBox.Show("Подключение успешно");
-                ConnBaza.ConnBaz().Close();
+                ConnBaza.ConnBaz().Close();//Закрытие соединения
             }
         }
     }

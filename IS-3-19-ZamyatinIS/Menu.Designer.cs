@@ -77,7 +77,7 @@ namespace IS_3_19_ZamyatinIS
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(613, 126);
+            this.button5.Location = new System.Drawing.Point(603, 126);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 55);
             this.button5.TabIndex = 4;

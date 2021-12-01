@@ -22,25 +22,25 @@ namespace IS_3_19_ZamyatinIS
 
         }
         abstract class Complect<T>
-        {           
+        {   //Объявляем поля       
             private int price;
             private int yearofissue;
-            T articul;
+            T articul; //Обобщённый тип
 
-            public Complect(int pr,int year,T art)
+            public Complect(int pr,int year,T art)//Инициализация через конструктор
             {
                 price = pr;
                 yearofissue = year;
                 articul = art;
             }
-            public virtual string Display()
+            public virtual string Display() //Метод вывода информации
             {
                 return($"Цена {price} Год выпуска {yearofissue} Артикул {articul}");
             }
         }
-        class CP<T>:Complect<T>
+        class CP<T>:Complect<T> //Наследование обобщённого класса
         {
-            private int Chastota { get; set; }
+            private int Chastota { get; set; } //Закрываем поля свойствами
             private int Yadra { get; set; }
             private int Potoki { get; set; }
             public CP(int pra,int years,T artic,int Chastot,int Yadr,int Potok):base(pra,years,artic)
@@ -49,7 +49,7 @@ namespace IS_3_19_ZamyatinIS
                 Yadra = Yadr;
                 Potoki = Potok;
             }
-            public override string Display()
+            public override string Display()//Переопределяем метод
             {
                 return base.Display() + ($"Частота {Chastota} Кол-во ядер {Yadra} Кол-во потоков {Potoki}");
             }
@@ -74,7 +74,7 @@ namespace IS_3_19_ZamyatinIS
         private void button1_Click(object sender, EventArgs e)
         {
             CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox9.Text) ,Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
-            listBox1.Items.Add(cp.Display());            
+            listBox1.Items.Add(cp.Display());//Добавляем данные в listbox            
         }
         private void button2_Click(object sender, EventArgs e)
         {
