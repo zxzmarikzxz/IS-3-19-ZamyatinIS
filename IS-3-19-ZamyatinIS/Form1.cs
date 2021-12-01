@@ -27,14 +27,15 @@ namespace IS_3_19_ZamyatinIS
             private int yearofissue;
             T articul;
 
-            public Complect(int pr,int year)
+            public Complect(int pr,int year,T art)
             {
                 price = pr;
                 yearofissue = year;
+                articul = art;
             }
             public virtual string Display()
             {
-                return($"Цена {price} Год выпуска {yearofissue}");
+                return($"Цена {price} Год выпуска {yearofissue} Артикул {articul}");
             }
         }
         class CP<T>:Complect<T>
@@ -42,7 +43,7 @@ namespace IS_3_19_ZamyatinIS
             private int Chastota { get; set; }
             private int Yadra { get; set; }
             private int Potoki { get; set; }
-            public CP(int pra,int years,int Chastot,int Yadr,int Potok):base(pra,years)
+            public CP(int pra,int years,T artic,int Chastot,int Yadr,int Potok):base(pra,years,artic)
             {
                 Chastota = Chastot;
                 Yadra = Yadr;
@@ -58,26 +59,26 @@ namespace IS_3_19_ZamyatinIS
             private int GPU { get; set; }
             private string Proizvoditel { get; set; }
             private int Memory { get; set; }
-            public Videomap(int prr, int yea,int GPu, string Proizvoditell, int Memor) : base(prr,yea)
+            public Videomap(int prr, int yea, T articc,int GPu, string Proizvoditell, int Memor) : base(prr,yea,articc)
             {
                 GPU = GPu;
                 Proizvoditel = Proizvoditell;
                 Memory = Memor;
             }
             public override string Display()
-            { 
-                return ($"GPU {GPU} Производитель {Proizvoditel} Объём памяти {Memory}");
+            {
+                return base.Display()+ ($"GPU {GPU} Производитель {Proizvoditel} Объём памяти {Memory}");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text),Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
+            CP<int> cp = new CP<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox9.Text) ,Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), Convert.ToInt32(textBox5.Text));
             listBox1.Items.Add(cp.Display());            
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Videomap<int> vp = new Videomap<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text));
+            Videomap<int> vp = new Videomap<int>(Convert.ToInt32(textBox1.Text), Convert.ToInt32(textBox2.Text), Convert.ToInt32(textBox9.Text), Convert.ToInt32(textBox6.Text), textBox7.Text, Convert.ToInt32(textBox8.Text));
             listBox1.Items.Add(vp.Display());
         }
     }

@@ -17,6 +17,7 @@ namespace IS_3_19_ZamyatinIS
         {
             public MySqlConnection ConnBaz()
             {
+                //Создание строки подключения
                 string port = "33333";
                 string host = "caseum.ru";              
                 string user = "test_user";
@@ -38,7 +39,7 @@ namespace IS_3_19_ZamyatinIS
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   //Проверка подключения
             ConnBaza ConnBaza = new ConnBaza();
             try
             {
