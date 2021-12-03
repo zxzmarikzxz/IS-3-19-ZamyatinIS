@@ -74,6 +74,7 @@ namespace IS_3_19_ZamyatinIS
             this.button4.TabIndex = 3;
             this.button4.Text = "4 задание";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
