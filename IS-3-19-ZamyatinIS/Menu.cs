@@ -40,5 +40,11 @@ namespace IS_3_19_ZamyatinIS
             Form4 fr = new Form4();
             fr.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form5 fr = new Form5();
+            fr.ShowDialog();
+        }
     }
 }
