@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Library74
 {
-    class ConnBaza
+    public class ConnBaza
     {
         public MySqlConnection ConnBaz()
         {
