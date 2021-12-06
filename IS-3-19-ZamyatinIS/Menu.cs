@@ -17,7 +17,7 @@ namespace IS_3_19_ZamyatinIS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//Открытие другой формы и блокировка воздействия на первоначальную форму пока открыта вторичная
         {
             Form1 fr = new Form1();
             fr.ShowDialog();
